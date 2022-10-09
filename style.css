@@ -1,0 +1,260 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #CBF3F0;
+    font-family: "Bahnschrift";
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.header
+        {
+            height: 70px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            line-height: 70px;   
+            z-index: 1;
+            position: sticky;
+            top: 0;
+        }
+    
+        .header > h1 > a
+        {
+            color: #CBF3F0;
+            text-shadow: 2px 2px 2px black;
+            transition: 0.4s;
+        }
+    
+        .header > h1 > a:hover
+        {
+            font-size: 1.1em;
+        }
+    
+        .container, .header
+        {
+            background: linear-gradient(90deg, #11ebd5 0%, #2EC4B6 20%, #2EC4B6 20%, #2ec486 80%, #2ec486 80%, #2ec42e 100%);
+        }
+    
+        .container
+        {
+            display: grid;
+            justify-content: center;
+            padding-bottom: 1.5%;
+        }
+        
+        ul
+        {
+            list-style: none;
+        }
+    
+        a
+        {
+            color: white;
+            display: block;        
+        }
+    
+        li
+        {
+            line-height: 70px;
+            text-align: center;
+        }
+        
+        .menu > li
+        {
+            display: inline-block;
+            width: 100px;
+            background: linear-gradient(45deg, #FF9F1C 0%, #FF9F1C 50%, #FFBF69 50%,  #FFBF69 100%);
+            background-size: 230% 100%;
+            transition: 0.4s;
+        }
+    
+        .menu > li:hover
+        {
+            background-position: 100% 0%;
+        }
+    
+        .menu
+        {
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .almenu
+        {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+            transform: translateY(-100%);
+            transition: 0.4s;
+        }
+        
+        .almenu > li
+        {
+            width: 100px;
+            background: linear-gradient(90deg, #FF9F1C 0%, #FF9F1C 10%, #FFBF69 10%, #FFBF69 100%);
+            background-size: 200% 100%;
+            transition: 0.4s;
+        }
+    
+        .almenu > li > a
+        {
+            transition: 0.4s;
+            margin-left: 20%;
+        }
+    
+        .menu > li:hover > .almenu
+        {
+            visibility: visible;
+            transform: translateY(-0%);
+        }
+        
+        .almenu > li:hover
+        {
+            background-position: -80% 0%;
+        }
+    
+        .almenu > li:hover > a
+        {
+            margin-left: -20%;
+        }
+
+::-moz-selection { /* Code for Firefox */
+    color: #ff9f1c;
+    background: #ffd7ba;
+  }
+  
+  ::selection {
+    color: #ff9f1c;
+    background: #ffd7ba;
+  }
+
+
+.content {
+    z-index: -1;
+    width: 60%;
+    background: linear-gradient(90deg, #2EC4B6, #2ec486);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: justify;
+    min-width: 450px;
+}
+
+  .content > h1, h4
+{
+    grid-column-start: span 2;
+    text-align: center;
+}
+
+.content > p
+{
+    margin-bottom: 10%;
+    grid-column-start: 1;
+}
+
+.content > h3
+{
+    grid-column-start: 1;
+}
+
+.content > p, h2, h3
+{
+    margin-left: 10%;
+}
+
+.content > h3, h4
+{
+    margin-bottom: 2%;
+}
+
+.content > img
+{
+    width: 60%;
+    margin: 0 auto 10% auto;
+}
+
+
+.imageSlider {
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto 10% auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.imageSlider > .img-container > .active {
+    width: 100%;
+    margin: 0;
+}
+
+.imageSlider > .img-container > img:not(.active)
+{
+    display: none;
+}
+
+.prev, .next {
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+}
+
+
+.helyszincontent {
+    z-index: -1;
+    width: 60%;
+    background: linear-gradient(90deg, #2EC4B6, #2ec486);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: justify;
+    min-width: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.helyszinmenu {    
+    width: 15%;
+}
+
+.helyszinmenu > div > li {
+    background: linear-gradient(45deg, #FF9F1C 0%, #FF9F1C 50%, #FFBF69 50%,  #FFBF69 100%);
+    background-size: 230% 100%;
+    transition: 0.4s;
+    margin-bottom: 10px;
+}
+
+.helyszinmenu > div > li:hover {
+    background-position: 100% 0%;
+}
+
+.keszitokcontent {
+    z-index: -1;
+    width: 60%;
+    background: linear-gradient(90deg, #2EC4B6, #2ec486);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: justify;
+    min-width: 450px;
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.keszitokcontent > p{
+    color: white;
+    font-size: 3em;
+}
